@@ -1,0 +1,28 @@
+@model MVVM.UI.Web.Models.Home.CategoriesViewModel
+
+<div>
+    <h1>Categories</h1>
+    <p>@Model.Text</p>
+</div>
+
+<div id="categories-container">
+
+    <label for="trains-checkbox">Trains</label>
+    <input data-bind="checked: TrainsChecked" id="trains-checkbox" type="checkbox" />
+
+    <label for="boats-checkbox">Boats</label>
+    <input data-bind="checked: BoatsChecked" id="boats-checkbox" type="checkbox" />
+
+    <label for="planes-checkbox">Planes</label>
+    <input data-bind="checked: PlanesChecked" id="planes-checkbox" type="checkbox" />
+
+    <select data-bind="options: ListBoxItems, optionsText: 'Text', optionsValue: 'Value', attr: { size: ListBoxItems().length }" id="trains-boats-plains-select">
+    </select>
+
+</div>
+
+@section Scripts
+{
+    <script src="/Scripts/ViewModels/HomeCategoriesVM.js"></script>
+    <script src="/Scripts/Home/categories.js"></script>
+}

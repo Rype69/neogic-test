@@ -1,0 +1,20 @@
+@model MVVM.UI.Web.Models.Home.IndexViewModel
+
+@* TODO: Using site.css, amend this markup to center align the contents of the <div> both vertically and horizontally. *@
+<div>
+    <h1>Web Admin</h1>
+    <p>@Model.Text</p>
+</div>
+
+<div id="controls-container">
+    @* TODO: Convert this <select> into a "select2". *@
+    <select data-bind="options: SelectListItems, optionsValue: 'Value', optionsText: 'Text', value: SelectListItem" id="select-list"></select>
+    @* TODO: Show and hide #data-textarea based on the selection of #select-list. *@
+    <textarea class="full-width" id="data-textarea" rows="25"></textarea>
+</div>
+
+@section Scripts
+{
+    <script src="/Scripts/ViewModels/HomeIndexVM.js"></script>
+    <script src="/Scripts/Home/index.js"></script>
+}
