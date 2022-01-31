@@ -13,7 +13,7 @@ namespace MVVM.UI.Web.Controllers
 
         public ActionResult Index()
         {
-            var model = new IndexViewModel();
+            IndexViewModel model = null;
             return View(model);
         }
     }
